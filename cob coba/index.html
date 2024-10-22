@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Streaming Finn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Streaming Finn</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#genre">Genre</a></li>
+                <li><a href="#popular">Populer</a></li>
+                <li><a href="#new">Baru</a></li>
+                <li><a href="#login">Login/Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="login">
+        <h3>Login</h3>
+        <form onsubmit="login(); return false;">
+            <label for="username">Username:</label>
+            <input type="email" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    
+    
+    <section class="hero">
+        <div class="banner">
+            <h2>Film Pilihan</h2>
+            <button>Play</button>
+            <button>Detail</button>
+        </div>
+    </section>
+    
+    <section id="genre">
+        <h3>Genre</h3>
+        <!-- Film Genre Slider -->
+    </section>
+    
+    <section id="popular">
+        <h3>Populer</h3>
+        <div class="film-container">
+            <div class="film">
+                <img src="godzila.webp" alt="GODZILA MINUS ONE" data-video="">
+                <div class="content">
+                    <p>GODZILA MINUS ONE</p>
+                </div>
+            </div>
+            <div class="film">
+                <img src="GRAN TURISMO.jpg" alt="GRAN TURISMO" data-video="GRAN_TURISMO_VIDEO_URL.mp4">
+                <div class="content">
+                    <p>GRAN TURISMO</p>
+                </div>
+            </div>
+            <div class="film">
+                <img src="agaklaen2 - Copy - Copy.jpg" alt="GRAN TURISMO" data-video="GRAN_TURISMO_VIDEO_URL.mp4">
+                <div class="content">
+                    <p>Agak laen</p>
+                </div>
+            </div>
+            <div class="film">
+                <img src="aang.png" alt="GRAN TURISMO" data-video="GRAN_TURISMO_VIDEO_URL.mp4">
+                <div class="content">
+                    <p>aang</p>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Popup -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <video controls id="videoPlayer">
+                    <source src="" type="video/mp4">
+                    Browser Anda tidak mendukung video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Streaming Keren</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
